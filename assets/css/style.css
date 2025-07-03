@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+}
+
+body {
+    font-family: 'Bebas Neue', sans-serif; /* Ensures Bebas Neue is applied */
+}
