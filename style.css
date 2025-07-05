@@ -34,6 +34,17 @@ body {
     position: relative;
 }
 
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+}
+
+.logo-img {
+    width: 20px; /* Adjust logo size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
 /* Navigation Bar */
 .navbar {
     display: flex;
@@ -47,10 +58,13 @@ body {
 }
 
 .navbar .logo {
-    color: white;
-    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-size: 20px; /* Increase the font size to make the logo bigger */
     font-family: 'Bebas Neue', sans-serif;
+    opacity: 0.9; /* Adjust opacity to make the logo slightly transparent */
+    transition: opacity 0.5s ease-in-out; /* Optional, for smooth transition effect */
 }
+
 
 .navbar-items {
     display: flex;
@@ -76,6 +90,22 @@ body {
 .navbar-items ul li a:hover {
     color: #ff6a00; /* Orange color when hovered */
 }
+
+
+/* Adjust navigation for logo */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(145, 115, 51, 0.9); /* Semi-transparent navbar background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
 
 /* Hamburger icon */
 .building {
@@ -142,7 +172,8 @@ body {
 }
 
 .heading span {
-    color: #e5aa70;
+    color: #e5aa70
+;
 }
 
 .para {
@@ -162,7 +193,7 @@ body {
 }
 
 .btn:hover {
-    color: #fff;
+    color: #e5aa70;
     background-color: transparent;
     transition: 1s;
 }
@@ -295,15 +326,27 @@ body {
   }
   /* ________services */
   .service_box{
-    display: flex;
-    padding: 5%;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* adds spacing between boxes */
+}
 .boxes{
-    text-align: left;
-    margin: 0 1%;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  overflow: hidden; /* Prevents image from overflowing the box */
 }
 .boxes img{
-    width: 100%;
+  width: 100%;
+  height: 200px; /* Set a fixed height to unify all images */
+  object-fit: cover; /* Prevent image distortion */
+  transition: transform 0.4s ease;
 }
 .boxes h1{
     padding: 2% 0;
@@ -317,7 +360,12 @@ body {
     color: #e5aa70;
 }
 .boxes a:hover{
-    color: #999;
+  transform: scale(1.05) translateY(-10px); /* Zoom + Slide Up */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.boxes:hover img {
+  transform: scale(1.1);
 }
  /* ________contact us */
  .contact-sec{
@@ -327,9 +375,9 @@ body {
     margin-top: 4%;
  }
   .contact_box{
-    background-image: linear-gradient(rgba(2 10 10/57%),rgba(2 10 10/20%)),url(C:/Users/kasse/OneDrive/Desktop/kasim%20portfolio/ASSETS/assets/images/Enscape_2025-06-27-13-47-45.jpg);
+    background-image: linear-gradient(rgba(2 10 10/57%),rgba(2 10 10/20%)),url(assets/images/Black%20and%20White,%20Minimal%20Logo.png);
     border-radius: 20px;
-    width: 45%;
+    width: 80%;
     padding: 2%;
     background-repeat: no-repeat;
     background-position: center;
